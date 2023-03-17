@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363330"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cat" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/baseline_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="senha"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/baseline_lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Esqueceu sua senha?"
+        android:textAlignment="center"
+        android:textColor="#3282AA"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/idbtnEntrar"
+        style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrar" />
+
+    <Button
+        android:id="@+id/idbtnSair"
+        style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sair" />
+
+
+</LinearLayout>
