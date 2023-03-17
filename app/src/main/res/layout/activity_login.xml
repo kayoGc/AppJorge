@@ -8,62 +8,86 @@
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:scaleType="centerCrop"
-        android:src="@drawable/cat" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/idEmail"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="E-mail"
-        app:endIconMode="clear_text"
-        app:startIconDrawable="@drawable/baseline_email">
+        android:layout_height="match_parent">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <ImageView
+            android:layout_marginLeft="110dp"
+            android:id="@+id/gato"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/cat"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="5dp"
+            android:id="@+id/idEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_below="@+id/gato"
+            android:hint="E-mail"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/baseline_email">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/idSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="senha"
-        app:endIconMode="password_toggle"
-        app:startIconDrawable="@drawable/baseline_lock">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="5dp"
+            android:id="@+id/idSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_below="@+id/idEmail"
+            android:hint="senha"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/baseline_lock">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Esqueceu sua senha?"
-        android:textAlignment="center"
-        android:textColor="#3282AA"
-        android:textStyle="bold" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/idbtnEntrar"
-        style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Entrar" />
+        <TextView
+            android:id="@+id/idESenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idSenha"
+            android:text="Esqueceu sua senha?"
+            android:textAlignment="center"
+            android:textColor="#3282AA"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/idbtnSair"
-        style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sair" />
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idESenha"
+            android:orientation="horizontal">
 
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/idbtnEntrar"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Entrar" />
 
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/idbtnSair"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sair" />
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>
